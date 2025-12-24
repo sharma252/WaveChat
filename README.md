@@ -24,7 +24,7 @@ WaveChat is a comprehensive real-time chat application demonstrating a modern fu
 
 The project follows a microservices-inspired architecture:
 
-1.  **Nginx (Gateway)**: listens on port 80.
+1.  **Nginx (Gateway)**: listens on port 8080 (host).
     - `/` -> Routed to Frontend container.
     - `/api/` -> Routed to Backend (FastAPI).
     - `/ws/` -> WebSocket connections (proxied with Upgrade headers).
@@ -43,7 +43,7 @@ The project follows a microservices-inspired architecture:
 1.  Clone the repository:
     ```bash
     git clone <repository-url>
-    cd complete-app
+    cd WaveChat
     ```
 
 2.  Start the application:
@@ -81,6 +81,6 @@ This test is automatically executed in the CI pipeline on every push.
 - [x] **Backend**: API + Business Logic + Real-time socket management.
 - [x] **Frontend**: State management + UI components + API integration.
 - [x] **Database**: Relational storage + Migrations (auto-creation on startup).
-- [x] **Nginx**: Load balancing foundation + Header manipulation + Shared port (80) access.
+- [x] **Nginx**: Load balancing foundation + Header manipulation + Port 8080 access.
 - [x] **Docker**: Service isolation + Environment consistency.
 - [x] **CI/CD**: Automated build verification + Integration testing.
