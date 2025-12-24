@@ -16,7 +16,7 @@ The application is split into four primary services, orchestrated by `docker-com
   - Two-stage build: Build (Node 20) -> Serve (Nginx).
   - Optimized for production by serving static assets through a lightweight Nginx container.
 - **Nginx Gateway**:
-  - Acts as the Single Point of Entry (Port 80).
+  - Acts as the Single Point of Entry (Port 8080 on Host).
   - Handles routing and WebSocket protocol upgrades.
 
 ### Useful Docker Commands
@@ -58,7 +58,7 @@ We use a Python-based integration test (`backend/test_integration.py`) that perf
 2. Run: `python backend/test_integration.py`
 
 ### 2. Manual Verification
-1. Open [http://localhost](http://localhost) in two different browser tabs.
+1. Open [http://localhost:8080](http://localhost:8080) in two different browser tabs.
 2. Enter "User A" in tab 1 and "User B" in tab 2.
 3. Send a message from User A; it should appear instantly for User B.
 4. Refresh both tabs; the chat history should be reloaded from the database.

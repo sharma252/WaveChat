@@ -52,7 +52,7 @@ The project follows a microservices-inspired architecture:
     ```
 
 3.  Access the app:
-    - Open your browser at `http://localhost`.
+    - Open your browser at `http://localhost:8080`.
     - Enter a username and start chatting!
 
 ## 🧪 Testing

@@ -5,8 +5,8 @@ import requests
 import time
 
 def test_chat_persistence():
-    url = "http://localhost/api/messages"
-    ws_url = "ws://localhost/ws/test_client"
+    url = "http://localhost:8080/api/messages"
+    ws_url = "ws://localhost:8080/ws/test_client"
     
     # Wait for the system to be up with retries
     max_retries = 10
