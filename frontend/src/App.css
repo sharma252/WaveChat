@@ -1,0 +1,14 @@
+.chat-box {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+  padding: 1rem;
+}
+
+.text-end {
+  text-align: right;
+}
+
+.bg-light {
+  background-color: #e9ecef !important;
+}
