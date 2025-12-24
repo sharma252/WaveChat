@@ -21,7 +21,10 @@ jobs:
           sudo apt-get install -y docker-compose
 
       - name: Build and Start Services
-        run: docker-compose up -d
+        run: |
+          docker-compose up -d
+          sleep 5
+          docker-compose ps
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -34,6 +37,10 @@ jobs:
 
       - name: Run Integration Tests
         run: python backend/test_integration.py
+
+      - name: Show Logs on Failure
+        if: failure()
+        run: docker-compose logs
 
       - name: Shutdown Services
         if: always()
